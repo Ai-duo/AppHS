@@ -1,0 +1,317 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="live"
+            type="com.add.appxm.Live" />
+        <variable
+            name="dmgd"
+            type="com.add.appxm.Dmgd" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bk1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1.2"
+                    android:paddingLeft="@dimen/firstpagepadd"
+                    android:paddingTop="@dimen/firstpagepadd"
+                    android:paddingRight="@dimen/firstpagepadd"
+                    android:paddingBottom="@dimen/firstpagepadd"
+                    android:src="@drawable/wd" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="温度"
+                    android:textSize="@dimen/firstpagetextsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{live.wea_wendu+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{`日最高\n`+live.wea_Maxwendu+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{`日最低\n`+live.wea_Minwendu+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bk1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1.2"
+                    android:paddingLeft="@dimen/firstpagepadd"
+                    android:paddingTop="@dimen/firstpagepadd"
+                    android:paddingRight="@dimen/firstpagepadd"
+                    android:paddingBottom="@dimen/firstpagepadd"
+                    android:src="@drawable/sd" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="湿度"
+                    android:textSize="@dimen/firstpagetextsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{live.wea_shidu+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{`日最高\n`+live.wea_Maxshidu+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{`日最低\n`+live.wea_Minshidu+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bk1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1.2"
+                    android:paddingLeft="@dimen/firstpagepadd"
+                    android:paddingTop="@dimen/firstpagepadd"
+                    android:paddingRight="@dimen/firstpagepadd"
+                    android:paddingBottom="@dimen/firstpagepadd"
+                    android:src="@drawable/js" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="降水"
+                    android:textSize="@dimen/firstpagetextsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{live.wea_yuliang+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bk1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1.2"
+                    android:paddingLeft="@dimen/firstpagepadd"
+                    android:paddingTop="@dimen/firstpagepadd"
+                    android:paddingRight="@dimen/firstpagepadd"
+                    android:paddingBottom="@dimen/firstpagepadd"
+                    android:src="@drawable/fs" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="风速"
+                    android:textSize="@dimen/firstpagetextsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{live.wea_fengsu+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{`最大\n`+live.wea_Maxfengsu+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bk1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1.2"
+                    android:paddingLeft="@dimen/firstpagepadd"
+                    android:paddingTop="@dimen/firstpagepadd"
+                    android:paddingRight="@dimen/firstpagepadd"
+                    android:paddingBottom="@dimen/firstpagepadd"
+                    android:src="@drawable/fx" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="风向"
+                    android:textSize="@dimen/firstpagetextsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{live.wea_fengxiang+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bk1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1.2"
+                    android:paddingLeft="@dimen/firstpagepadd"
+                    android:paddingTop="@dimen/firstpagepadd"
+                    android:paddingRight="@dimen/firstpagepadd"
+                    android:paddingBottom="@dimen/firstpagepadd"
+                    android:src="@drawable/njd" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="能见度"
+                    android:textSize="@dimen/firstpagetextsize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{live.wea_vis+`\n`}"
+                    android:textSize="@dimen/firstpageindexsize" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                   />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
