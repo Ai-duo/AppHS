@@ -73,7 +73,7 @@ public class MainActivity extends FragmentActivity {
 
     Timer timer, timer1, timer2;
     int index = 0;
-
+    int page = 4;
     public void changFragment() {
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -81,8 +81,8 @@ public class MainActivity extends FragmentActivity {
             public void run() {
                 FragmentManager manager = getSupportFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();
-                if (index == 60000) index = 0;
-                int result = index % 6;
+                if (index == page*10000) index = 0;
+                int result = index % page;
                 EventBus.getDefault().post(result);
                 if (result == 0) {
                     transaction.replace(R.id.contenter, firstFragment);
@@ -93,7 +93,7 @@ public class MainActivity extends FragmentActivity {
                 } else if (result == 2) {
                     transaction.replace(R.id.contenter, thirdFragment);
                     transaction.commit();
-                } else if (result == 3) {
+                } else if (result == 5) {
                     transaction.replace(R.id.contenter, fourthFragment);
                     transaction.commit();
                     try {
@@ -109,11 +109,11 @@ public class MainActivity extends FragmentActivity {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                } else if (result == 5) {
+                } else if (result == 3) {
                     transaction.replace(R.id.contenter, videoFragment);
                     transaction.commit();
                     try {
-                        Thread.sleep(50 * 1000);
+                        Thread.sleep(412 * 1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
