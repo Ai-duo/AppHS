@@ -87,6 +87,7 @@ public  class DataBindingSets {
                 view.setImageResource(R.drawable.yinyouzhenyu);
             case"阵雨":
                 view.setImageResource(R.drawable.zhenyu);
+                break;
             case"阵雪":
                 view.setImageResource(R.drawable.zhenxue);
                 break;
