@@ -36,8 +36,9 @@ public class VideoFragment extends Fragment {
         /*paths[0] = "android.resource://" + getActivity().getPackageName() + "/raw/xys1";
         paths[1] = "android.resource://" + getActivity().getPackageName() + "/raw/xys2";
         paths[2] = "android.resource://" + getActivity().getPackageName() + "/raw/xys3";*/
-        paths[0] = "android.resource://" + getActivity().getPackageName() + "/raw/xys4";
-        paths[1] = "android.resource://" + getActivity().getPackageName() + "/raw/xys5";
+       // paths[0] = "android.resource://" + getActivity().getPackageName() + "/raw/xys4";
+       // paths[1] = "android.resource://" + getActivity().getPackageName() + "/raw/xys5";
+        paths[0] = "android.resource://" + getActivity().getPackageName() + "/raw/xa";
         view.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
@@ -48,14 +49,14 @@ public class VideoFragment extends Fragment {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
                 index++;
-                if (index < 3) {
+                if (index < 1) {
                     view.setVideoPath(paths[index]);
                 } else {
                     index = 0;
                 }
             }
         });
-        view.setVideoPath("android.resource://" + getActivity().getPackageName() + "/raw/xys4");
+        view.setVideoPath("android.resource://" + getActivity().getPackageName() + "/raw/xa");
 
         return view;
     }

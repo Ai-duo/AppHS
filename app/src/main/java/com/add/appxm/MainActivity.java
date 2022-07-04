@@ -72,7 +72,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     Timer timer, timer1, timer2;
-    int index = 0;
+    int index =0;
     int page = 4;
     public void changFragment() {
         timer = new Timer();
@@ -113,7 +113,7 @@ public class MainActivity extends FragmentActivity {
                     transaction.replace(R.id.contenter, videoFragment);
                     transaction.commit();
                     try {
-                        Thread.sleep(412 * 1000);
+                        Thread.sleep(110 * 1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
